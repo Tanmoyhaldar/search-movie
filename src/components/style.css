@@ -1,0 +1,127 @@
+*{
+  background-color: #f0f0f0;
+}
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 94vw;
+  outline: none;
+  margin-top: 3vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+.movie-details {
+  display: flex;
+  margin: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie-details:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  flex: 0 0 200px;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: 8px 0 0 8px;
+  transition: 0.3s;
+}
+.movie-poster img:hover {
+  border-radius: 8px 0 0 8px;
+  box-shadow: 1px 1px 1px black;
+  cursor: pointer;
+}
+
+.movie-info {
+  padding: 20px;
+  height: 70vh;
+  overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.movie-info::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.movie-info {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.movie-info h2 {
+  margin-top: 0;
+}
+
+.movie-info p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.movie-info p strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.movie-info p:last-child {
+  margin-bottom: 0;
+}
+
+.ratings {
+  margin-top: 10px;
+}
+
+.ratings div {
+  margin-bottom: 5px;
+}
+
+.ratings strong {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .movie-details {
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    width: 100%;
+    flex: none;
+  }
+
+  .movie-poster img {
+    border-radius: 8px 8px 0 0;
+  }
+}
+
+.red {
+  font-weight: bold;
+  color : red;
+}
+
+.not-found-message {
+  text-align: center;
+  font-size: 36px;
+  color: #0d20c5; /* Eye-catching color */
+  margin-top: 20vh; /* Adjust the top margin for vertical centering */
+}
+
+.not-found-message::after {
+  content: "😞"; /* Sad face emoji */
+  display: block;
+  font-size: 48px; /* Increase size for emphasis */
+  margin-top: 20px; /* Space between text and emoji */
+}
